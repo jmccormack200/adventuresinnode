@@ -1,0 +1,15 @@
+process.on('message', function(message, parent){
+	var meal = {}
+	switch(message.cmd){
+		case 'makeBreakfast':
+			meal = ["ham", "eggs", "toast"];
+			break;
+		case 'makeLunch':
+			meal = ["veggie burger", "fries", "shake"];
+			break
+		case 'makeDinner':
+			mean = ["soup", "salad", "breadsticks"];
+			break;
+	}	
+	process.send(meal);
+});
